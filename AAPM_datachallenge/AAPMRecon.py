@@ -51,8 +51,8 @@ def AAPMRecon_init(inp_file):
     # physics
     cfg.physics.energyCount = 12                    # number of energy bins
     cfg.physics.monochromatic = -1                  # -1 for polychromatic (see protocol.cfg);
-    cfg.physics.colSampleCount = 2                  # number of samples of detector cells in lateral direction
-    cfg.physics.rowSampleCount = 2                  # number of samples of detector cells in longitudinal direction
+    cfg.physics.colSampleCount = 1                  # number of samples of detector cells in lateral direction
+    cfg.physics.rowSampleCount = 1                  # number of samples of detector cells in longitudinal direction
     cfg.physics.srcXSampleCount = 2                 # number of samples of focal spot in lateral direction
     cfg.physics.srcYSampleCount = 2                 # number of samples of focal spot cells in longitudinal direction
     cfg.physics.viewSampleCount = 2                 # number of samples of each view angle range in rotational direction
@@ -123,7 +123,7 @@ def AAPMRecon_init(inp_file):
     cfg.scanner.sdd = 950.0                         # source-to-detector distance (in mm)
     cfg.scanner.detectorColsPerMod = 1              # number of detector columns per module
     cfg.scanner.detectorRowsPerMod = 1              # number of detector rows per module
-    cfg.scanner.detectorColOffset = 0.0             # detector column offset relative to centered position (in detector columns)
+    cfg.scanner.detectorColOffset = -1.25             # detector column offset relative to centered position (in detector columns)
     cfg.scanner.detectorRowOffset = 0.0             # detector row offset relative to centered position (in detector rows)
     cfg.scanner.detectorColSize = 1.0               # detector column pitch or size (in mm)
     cfg.scanner.detectorRowSize = 1.0               # detector row pitch or size (in mm)
@@ -131,7 +131,7 @@ def AAPMRecon_init(inp_file):
     cfg.scanner.detectorRowCount = cfg.scanner.detectorRowsPerMod     # total number of detector rows
     cfg.scanner.detectorPrefilter = []              # detector filter 
     cfg.scanner.focalspotCallback = "SetFocalspot"  # name of function that defines the focal spot shape and model
-    cfg.scanner.focalspotData = "vct_small_fs.npz"  # Parameterize the model
+    cfg.scanner.focalspotData = "vct_large_fs.npz"  # Parameterize the model
     cfg.scanner.targetAngle = 7.0                   # target angle relative to scanner XY-plane (in degrees)
     cfg.scanner.focalspotWidth = 1.0
     cfg.scanner.focalspotLength = 1.0
@@ -151,7 +151,7 @@ def AAPMRecon_init(inp_file):
     cfg.recon.fov = 400.0                           # diameter of the reconstruction field-of-view (in mm)
     cfg.recon.imageSize = 512                       # number of columns and rows to be reconstructed (square)
     cfg.recon.sliceCount = 1                        # number of slices to reconstruct
-    cfg.recon.sliceThickness = 0.55                 # reconstruction slice thickness AND inter-slice interval (in mm)
+    cfg.recon.sliceThickness = 0.579                 # reconstruction slice thickness AND inter-slice interval (in mm)
     cfg.recon.centerOffset = [0.0, 0.0, 0.0]        # reconstruction offset relative to center of rotation (in mm)
     cfg.recon.reconType = 'fdk_equiAngle'           # Name of the recon function to call
     cfg.recon.kernelType = 'standard'               # 'R-L' for the Ramachandran-Lakshminarayanan (R-L) filter, rectangular window function
@@ -184,5 +184,8 @@ if __name__=="__main__":
     # not enough arguments
     if len(sys.argv) < 2: AAPMRecon_help()
     inp_file = sys.argv[1]
+    if inp_file.split('.')[-1] == 'raw':
+        inp_data = rawread(inp_file, [1000, 1, 900], 'float')
+        rawwrite(inp_file.replace("raw", "prep"), inp_data)
     cfg = AAPMRecon_init(inp_file)
     AAPMRecon_main(cfg)
