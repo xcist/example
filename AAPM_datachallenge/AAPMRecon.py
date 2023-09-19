@@ -14,7 +14,8 @@ from gecatsim.reconstruction.pyfiles import recon
 #=======================================
 def AAPMRecon_help():
     print("""
-AAPM data challenge reconstruction code, version 230828.
+AAPM data challenge reconstruction code, version 230919.
+See https://github.com/xcist/example/blob/main/AAPM_datachallenge for additional details.
 Usage:
   python AAPMRecon.py {input_file_name}
 Input:
