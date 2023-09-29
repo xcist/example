@@ -2,7 +2,7 @@
 
 ## How to install
 Simply run `pip install gecatsim` either in a Windows Anaconda prompt or Linux terminal (if you have done this before, please also run this command as we have been updating the package continuously). This will install the backbone XCIST package used in following reconstructions .
-After XCIST is installed, download AAPMRecon.py from [[https://github.com/xcist/example/AAPM_datachallenge/AAPMRecon.py](https://github.com/xcist/example/blob/main/AAPM_datachallenge/AAPMRecon.py)](https://github.com/xcist/example/blob/main/AAPM_datachallenge/AAPMRecon.py) to the local directory that you want to do reconstructions (usually a directory containing sinogram). No installation is needed for this utility.
+After XCIST is installed, download AAPMRecon.py from https://github.com/xcist/example/blob/main/AAPM_datachallenge/AAPMRecon.py to the local directory that you want to do reconstructions (usually a directory containing sinogram). No installation is needed for this utility.
 The current code has been validated to work on Windows, Linux OS. However, we recommend doing the simulation on Linux as it has threaded version of reconstruction, which should be faster.
 
 ## Usage
