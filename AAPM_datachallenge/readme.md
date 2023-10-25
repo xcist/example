@@ -20,14 +20,14 @@ After running this command, you should be able to see the output in the name of 
  # `AAPMProj.py` installation guide
 
 ## How to install
-[no need to this step if you have already installed `AAPMRecon.py`] Simply run `pip install gecatsim` either in a Windows Anaconda prompt or Linux terminal (if you have done this before, please also run this command as we have been updating the package continuously). This will install the backbone XCIST package used in following projections.
+[no need to do this step if you have already installed `AAPMRecon.py`] Simply run `pip install gecatsim` either in a Windows Anaconda prompt or Linux terminal (if you have done this before, please also run this command as we have been updating the package continuously). This will install the backbone XCIST package used in following projections.
 
 After XCIST is installed, download `AAPMProj.py` from https://github.com/xcist/example/blob/main/AAPM_datachallenge/AAPMProj.py to the local directory that you want to do forward projections (usually a directory containing images). No installation is needed for this utility.
 
 ## Usage
 To run the `AAPMProj.py`, just run `python AAPMProj.py {anatomy} {input}`, in which `{anatomy}` specifies if the anatomy is head or not, and `{input}` is the input filename of an image.
 
-`{anatomy}` can be either `h` meaning the phantom is head or neck, or `o` means other anatomies. The only difference between `h` and `o` is FOV: `220.16mm` is used for head or neck, and `400mm` is used for others. The input images should be of size 512x512pixels that can be read by `skimage.io.imread` (tested to be working with `png`).
+`{anatomy}` can be either `h` meaning the phantom is head or neck, or `o` means other anatomies. The only difference between `h` and `o` is FOV: `220.16mm` is used for head or neck, and `400mm` is used for others. The input images should be of size 512x512 pixels in the `raw` format.
 
 After running this command, you should be able to see the output in the name of `{input}_900x1000.raw`, which is a binary file of float32 in the dimension of 900x1000, and it be read using `imageJ`.
 
