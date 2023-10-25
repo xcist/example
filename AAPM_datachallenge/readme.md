@@ -27,11 +27,11 @@ After XCIST is installed, download `AAPMProj.py` from https://github.com/xcist/e
 ## Usage
 To run the `AAPMProj.py`, just run `python AAPMProj.py {anatomy} {input}`, in which `{anatomy}` specifies if the anatomy is head or not, and `{input}` is the input filename of an image.
 
-`{anatomy}` can be either `h` meaning the phantom is head or neck, or `o` means other anatomies. The only difference between `h` and `o` is FOV: `220.16mm` is used for head or neck, and `400mm` is used for others. The input images should be HU values of size 512x512 pixels in the `raw` format.
+`{anatomy}` can be either `h` meaning the phantom is head or neck, or `o` means other anatomies. The only difference between `h` and `o` is FOV: `220.16mm` is used for head or neck, and `400mm` is used for others. The input images should be HU values of size 512x512 pixels in the float32 `raw` format.
 
 After running this command, you should be able to see the output in the name of `{input}_900x1000.raw`, which is a binary file of float32 in the dimension of 900x1000, and it be read using `imageJ`.
 
-Please note that the forward projection here is using 2D fan-beam Distance Driven method [1,2]. This is different from how the training dataset is generated, which employs 3D cone-beam Distance Driven method.
+Please note that the forward projection here is using 2D fan-beam Distance Driven method [1,2]. This is different from how the training dataset is generated, which employs 3D cone-beam Distance Driven method. And also the output of `AAPMProj.py` is simply the line integral of the input image, without postlog.
 
 # Others
 For any problems encountered in the reconstruction or projection, please send an email to `Jiayong.Zhang@ge.com`
