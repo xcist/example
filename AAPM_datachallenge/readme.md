@@ -8,7 +8,7 @@ The current code has been validated to work on Windows, Linux OS. However, we re
 ## Usage
 To run the `AAPMRecon.py`, just run `python AAPMRecon.py {anatomy} {input}`, in which `{anatomy}` specifies if the anatomy is head or not, and `{input}` is the input filename of a sinogram.
 
-`{anatomy}` can be either `h` meaning the phantom is head or neck, and `o` means other anatomies. The only difference between `h` and `o` is FOV: `220.16mm` is used for head or neck, and `400mm` is used for others. The sinogram should be a binary file of 32-bit floating point (float32) of dimension [1000, 1, 900] (corresponding to [number of view, number of detector rows, number of detector columns]).
+`{anatomy}` can be either `h` meaning the phantom is head or neck, or `o` means other anatomies. The only difference between `h` and `o` is FOV: `220.16mm` is used for head or neck, and `400mm` is used for others. The sinogram should be a binary file of 32-bit floating point (float32) of dimension [1000, 1, 900] (corresponding to [number of view, number of detector rows, number of detector columns]).
 
 After running this command, you should be able to see the output in the name of `{input}_512x512x1.raw`, which is a binary file of float32 in the dimension of 512x512x1, i.e., it has 1 slice of reconstructed images of size 512x512 pixels. [Just a side note, the output can be directly opened in ImageJ if you want to have a look, but remember to make sure data type, size, endianness, etc. are correct.]
 
