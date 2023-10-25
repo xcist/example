@@ -17,8 +17,9 @@ def AAPMRecon_help():
 AAPM data challenge reconstruction code, version 230919.
 See https://github.com/xcist/example/blob/main/AAPM_datachallenge for additional details.
 Usage:
-  python AAPMRecon.py {input_file_name}
+  python AAPMRecon.py {anatomy} {input_file_name}
 Input:
+  {anatomy}: head or not, could be either h[head] or o[other, non-head]
   {input_file_name}: input sinogram
 Output:
   {input_file_name}_512x512x4.raw: reconstructed images in binary format, can be opened via ImageJ, etc.
@@ -33,7 +34,7 @@ Bug report:
 #=======================================
 # setting vendor neutral cfgs
 #=======================================
-def AAPMRecon_init(inp_file):
+def AAPMRecon_init(inp_file, FOV):
     cfg = CFG()
 
     # Phantom
@@ -149,7 +150,7 @@ def AAPMRecon_init(inp_file):
     cfg.scanner.eNoise = 25                         # standard deviation of Gaussian electronic noise (in electrons)
     
     # recon
-    cfg.recon.fov = 400.0                           # diameter of the reconstruction field-of-view (in mm)
+    cfg.recon.fov = FOV                           # diameter of the reconstruction field-of-view (in mm)
     cfg.recon.imageSize = 512                       # number of columns and rows to be reconstructed (square)
     cfg.recon.sliceCount = 1                        # number of slices to reconstruct
     cfg.recon.sliceThickness = 0.579                 # reconstruction slice thickness AND inter-slice interval (in mm)
@@ -183,10 +184,15 @@ def AAPMRecon_main(cfg):
 
 if __name__=="__main__":
     # not enough arguments
-    if len(sys.argv) < 2: AAPMRecon_help()
-    inp_file = sys.argv[1]
+    if len(sys.argv) < 3: AAPMRecon_help()
+    anatomy = sys.argv[1]
+    if anatomy.lower() == 'h':
+        FOV = 220.16
+    else:
+        FOV = 400
+    inp_file = sys.argv[2]
     if inp_file.split('.')[-1] == 'raw':
         inp_data = rawread(inp_file, [1000, 1, 900], 'float')
         rawwrite(inp_file.replace("raw", "prep"), inp_data)
-    cfg = AAPMRecon_init(inp_file)
+    cfg = AAPMRecon_init(inp_file, FOV)
     AAPMRecon_main(cfg)
