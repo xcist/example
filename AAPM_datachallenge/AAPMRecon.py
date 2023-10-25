@@ -3,6 +3,7 @@
 This is the recon code for the AAPM data challenge. Run `AAPMRecon.py` to see usage.
 '''
 
+import os
 import sys
 import platform
 import gecatsim as xc
@@ -196,3 +197,5 @@ if __name__=="__main__":
         rawwrite(inp_file.replace("raw", "prep"), inp_data)
     cfg = AAPMRecon_init(inp_file, FOV)
     AAPMRecon_main(cfg)
+    # remove intermediate files
+    os.remove(inp_file.replace("raw", "prep"))
