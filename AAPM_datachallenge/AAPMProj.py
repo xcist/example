@@ -11,7 +11,6 @@ from gecatsim.reconstruction.pyfiles import recon
 from ctypes import *
 from numpy.ctypeslib import ndpointer
 from gecatsim.pyfiles.CommonTools import *
-import skimage
 import matplotlib.pyplot as plt
 
 #=======================================
@@ -58,7 +57,7 @@ if __name__=="__main__":
         FOV = 220.16
     else:
         FOV = 400
-    img_name = sys.argv[2]
+    inp_file = sys.argv[2]
 
     sid = 550.
     sdd = 950.
@@ -80,10 +79,14 @@ if __name__=="__main__":
     yds = np.single(sid - sdd*np.cos(alphas)/pixsize)
     
     viewangles = np.single(1*(0+np.arange(nrviews)/(nrviews-1)*2*np.pi))
-    raw_img = skimage.io.imread(img_name, as_gray=True)
+    if inp_file.split('.')[-1] == 'raw':
+        raw_img = rawread(inp_file, [512, 512, 1], 'float')
+    else:
+        print("Error! Input images should be in raw format.")
+        sys.exit(1)
+    raw_img = raw_img/1000.*0.02+0.02 # now in the unit of mm^-1
     originalImgPtr = np.single(raw_img)
     sinogram = np.zeros([nrviews, nrdetcols, 1], dtype=np.single) 
-    
-    
+        
     sinogram = DD2FanProj(nrdetcols, x0, y0, xds, yds, xCor, yCor, viewangles, nrviews, sinogram, nrcols, nrrows, originalImgPtr)
-    rawwrite(os.path.splitext(img_name)[0]+"_DD2FanProj_900x1000.raw", sinogram)
+    rawwrite(os.path.splitext(inp_file)[0]+"_DD2FanProj_900x1000.raw", sinogram)
