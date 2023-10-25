@@ -85,7 +85,7 @@ if __name__=="__main__":
         print("\nError! Input images should be in raw format.\n")
         AAPMProj_help()
         sys.exit(1)
-    raw_img = raw_img/1000.*0.02+0.02 # now in the unit of mm^-1
+    raw_img = raw_img/1000.*0.2+0.2 # now in the unit of cm^-1
     originalImgPtr = np.single(raw_img)
     sinogram = np.zeros([nrviews, nrdetcols, 1], dtype=np.single) 
         
