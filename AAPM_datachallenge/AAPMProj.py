@@ -26,7 +26,7 @@ Input:
   {anatomy}: head or not, could be either h[head] or o[other, non-head]
   {input_file_name}: input images
 Output:
-  {input_file_name}_DD2Proj_900x1000.raw: sinogram in binary format, can be opened via ImageJ, etc.
+  {input_file_name}_DD2Proj_900x1000.raw: line integrals in binary format, can be opened via ImageJ, etc.
   32 bit floating, little endianess.
 Requirements:
   xcist(github.com/xcist/main)
@@ -82,7 +82,8 @@ if __name__=="__main__":
     if inp_file.split('.')[-1] == 'raw':
         raw_img = rawread(inp_file, [512, 512, 1], 'float')
     else:
-        print("Error! Input images should be in raw format.")
+        print("\nError! Input images should be in raw format.\n")
+        AAPMProj_help()
         sys.exit(1)
     raw_img = raw_img/1000.*0.02+0.02 # now in the unit of mm^-1
     originalImgPtr = np.single(raw_img)
