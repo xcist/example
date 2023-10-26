@@ -9,7 +9,7 @@ After XCIST is installed, download `AAPMRecon.py` from https://github.com/xcist/
 The current code has been validated to work on Windows, Linux OS. However, we recommend doing the simulation on Linux as it has threaded version of reconstruction, which should be faster.
 
 ## Usage
-To run the `AAPMRecon.py`, just run `python AAPMRecon.py {anatomy} {input}`, in which `{anatomy}` specifies if the anatomy is head or not, and `{input}` is the input filename of a sinogram.
+To run the `AAPMRecon.py`, just run `python AAPMRecon.py {anatomy} {input}`, in which `{anatomy}` specifies if the anatomy is head or not, and `{input}` is the input filename of a sinogram. Example: `python AAPMRecon.py h out_900x1000.raw`
 
 `{anatomy}` can be either `h` meaning the phantom is head or neck, or `o` means other anatomies. The only difference between `h` and `o` is FOV: `220.16mm` is used for head or neck, and `400mm` is used for others. The sinogram should be a binary file of 32-bit floating point (float32) of dimension [1000, 1, 900] (corresponding to [number of view, number of detector rows, number of detector columns]).
 
@@ -25,7 +25,7 @@ After running this command, you should be able to see the output in the name of 
 After XCIST is installed, download `AAPMProj.py` from https://github.com/xcist/example/blob/main/AAPM_datachallenge/AAPMProj.py to the local directory that you want to do forward projections (usually a directory containing images). No installation is needed for this utility.
 
 ## Usage
-To run the `AAPMProj.py`, just run `python AAPMProj.py {anatomy} {input}`, in which `{anatomy}` specifies if the anatomy is head or not, and `{input}` is the input filename of an image.
+To run the `AAPMProj.py`, just run `python AAPMProj.py {anatomy} {input}`, in which `{anatomy}` specifies if the anatomy is head or not, and `{input}` is the input filename of an image. Example: `python AAPMMProj.py h out_512x512x1.raw`
 
 `{anatomy}` can be either `h` meaning the phantom is head or neck, or `o` means other anatomies. The only difference between `h` and `o` is FOV: `220.16mm` is used for head or neck, and `400mm` is used for others. The input images should be HU values of size 512x512 pixels in the float32 `raw` format.
 
