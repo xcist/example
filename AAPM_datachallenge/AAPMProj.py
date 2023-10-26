@@ -76,7 +76,7 @@ if __name__=="__main__":
     dalpha = 2.*np.arctan2(1.0/2, sdd)
     alphas = (np.arange(nrdetcols)-(nrdetcols-1)/2-1.25)*dalpha
     xds = np.single(sdd*np.sin(alphas)/pixsize)
-    yds = np.single(sid - sdd*np.cos(alphas)/pixsize)
+    yds = np.single((sid - sdd*np.cos(alphas))/pixsize)
     
     viewangles = np.single(1*(0+np.arange(nrviews)/(nrviews-1)*2*np.pi))
     if inp_file.split('.')[-1] == 'raw':
@@ -90,4 +90,5 @@ if __name__=="__main__":
     sinogram = np.zeros([nrviews, nrdetcols, 1], dtype=np.single) 
         
     sinogram = DD2FanProj(nrdetcols, x0, y0, xds, yds, xCor, yCor, viewangles, nrviews, sinogram, nrcols, nrrows, originalImgPtr)
+    sinogram = sinogram*pixsize
     rawwrite(os.path.splitext(inp_file)[0]+"_DD2FanProj_900x1000.raw", sinogram)
