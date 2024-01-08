@@ -31,7 +31,7 @@ To run the `AAPMProj.py`, just run `python AAPMProj.py {anatomy} {input}`, in wh
 
 After running this command, you should be able to see the output in the name of `{input}_DD2FanProj_900x1000.raw`, which is a binary file of float32 in the dimension of 900x1000, and it be displayed using `imageJ`.
 
-Please note that the forward projection here is using 2D fan-beam Distance Driven method [1,2]. This is different from how the training dataset is generated, which employs 3D cone-beam Distance Driven method. And also the output of `AAPMProj.py` is simply the line integral of the input image, without postlog.
+Please note that the forward projection here is using 2D fan-beam Distance Driven method [1,2]. And also the output of `AAPMProj.py` is simply the line integral of the input image, without postlog.
 
 # Others
 For any problems encountered in the reconstruction or projection, please send an email to `Jiayong.Zhang@ge.com`
