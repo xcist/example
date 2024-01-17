@@ -1,0 +1,29 @@
+{
+    "n_materials": 3,
+    "mat_name": [
+    ],
+    "volumefractionmap_filename": [
+    ],
+    "volumefractionmap_datatype": [
+    ],
+    "cols": [
+    ],
+    "rows": [
+    ],
+    "slices": [
+    ],
+    "x_size": [
+    ],
+    "y_size": [
+    ],
+    "z_size": [
+    ],
+    "x_offset": [
+    ],
+    "y_offset": [
+    ],
+    "z_offset": [
+    ],
+    "density_scale": [
+    ]
+}
