@@ -91,6 +91,11 @@ ct.resultsName = "out"
 
 ct.run_all()  # run the scans defined by protocol.scanTypes
 
+# to convert prep to raw
+sino = xc.rawread(ct.resultsName+'.prep', [ct.protocol.viewCount, ct.scanner.detectorRowCount, ct.scanner.detectorColCount], 'float')
+sino = np.squeeze(sino[:, 0, :])
+xc.rawwrite(ct.resultsName+"_%dx%d.raw"%(ct.scanner.detectorColCount, ct.protocol.viewCount), sino.copy(order="C"))
+
 # reconstruction
 cfg = ct.get_current_cfg();
 cfg.do_Recon = 1
