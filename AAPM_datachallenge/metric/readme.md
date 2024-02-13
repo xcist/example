@@ -20,9 +20,10 @@ Please make sure that you have the following file structure when running this co
 │   ├── ...
 ```
 
-**How to install** This code needs `gecatsim` and `skimage` packages installed first:
+**How to install** This code needs `gecatsim`, `tqdm` and `skimage` packages installed first:
 ```
 pip install gecatsim
+pip install tqdm
 pip install scikit-image
 ```
 
