@@ -20,6 +20,13 @@ Please make sure that you have the following file structure when running this co
 │   ├── ...
 ```
 
+**How to install** This code needs `gecatsim` and `skimage` packages installed first:
+```
+pip install gecatsim
+pip install scikit-image
+```
+
+
 **How the code works** (you don’t need to read this to run the code, just for information purpose):
 1. apply max FOV mask: all values outside of the mask will be 0
 2. exclude metal region by setting pixels within the ground truth metal mask to 0
