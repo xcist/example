@@ -1,23 +1,25 @@
 **Usage**: `python AAPMmetric.py`
 
-**Output**: `results.txt`, which stores the RMSE, SSIM, PSNR scores between MAR results and Target.
+**Output**: `results_xxx.txt`, which stores the RMSE, SSIM, PSNR scores between MAR results and Target.
 
 Please make sure that you have the following file structure when running this code, and also make sure that you follow the naming convention here. Note that the "MAR" folder holds your MAR results.
 ```
 .
-├── AAPMmetric.py
-├── Baseline
-│   ├── test_body_metalart_img44_512x512x1.raw
-│   ├── ...
-├── MAR
-│   ├── test_body_metal_img44_512x512x1.raw
-│   ├── ... (place your results here)
-├── Mask
-│   ├── test_body_metalonlymask_img44_512x512x1.raw
-│   ├── ...
-├── Target
-│   ├── test_body_nometal_img44_512x512x1.raw
-│   ├── ...
+├── body1 (or head1)
+│   ├── AAPMmetric.py
+│   ├── Baseline
+│   │   ├── test_body_metalart_img44_512x512x1.raw
+│   │   ├── ...
+│   ├── MAR
+│   │   ├── test_body_metal_img44_512x512x1.raw
+│   │   ├── ... (place your results here)
+│   ├── Mask
+│   │   ├── test_body_metalonlymask_img44_512x512x1.raw
+│   │   ├── ...
+│   ├── Target
+│   │   ├── test_body_nometal_img44_512x512x1.raw
+│   │   ├── ...
+
 ```
 
 **How to install** This code needs `gecatsim`, `tqdm` and `skimage` packages installed first:
