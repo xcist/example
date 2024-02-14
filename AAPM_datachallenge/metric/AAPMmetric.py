@@ -62,7 +62,6 @@ for thissub in tqdm(allpaths):
     if 'body' in thissub:
         myrecon[FOVmask<0.5] = 0
         gtrecon[FOVmask<0.5] = 0
-
     if my_root == GT_root:
         psnr = SKpsnr(gtrecon, myrecon-0.001, data_range=1)
     else:
@@ -79,7 +78,12 @@ for thissub in tqdm(allpaths):
     rmse_list.append(rmse)
     out_list.append([ssim, psnr])
 
-with open('results.txt', 'w') as f:
+#if 'body' in mypath:
+#    results_name = 'results_body1.txt'
+#else:
+#    results_name = 'results_head1.txt'
+results_name = 'results_%s.txt'%(os.path.split(os.path.abspath('.'))[-1])
+with open(results_name, 'w') as f:
     f.write("# rmse, ssim, psnr, gt_path, my_path\n")
     for i in range(len(psnr_list)):
         f.write("{:10.6f} {:10.6f} {:10.6f} {} {}\n".format(rmse_list[i], ssim_list[i], psnr_list[i], allpaths[i], myimg_paths[i]))
