@@ -62,7 +62,7 @@ for thissub in tqdm(allpaths):
     if 'body' in thissub:
         myrecon[FOVmask<0.5] = 0
         gtrecon[FOVmask<0.5] = 0
-    breakpoint()
+
     if my_root == GT_root:
         psnr = SKpsnr(gtrecon, myrecon-0.001, data_range=1)
     else:
