@@ -55,8 +55,13 @@ if __name__=="__main__":
     anatomy = sys.argv[1]
     if anatomy.lower() == 'h':
         FOV = 220.16
-    else:
+    elif anatomy.lower() == 'o':
         FOV = 400
+    else:
+        try:
+            FOV = float(anatomy)
+        except:
+            print("Error! Please check the input of anatomy.\n")
     inp_file = sys.argv[2]
 
     sid = 550.
