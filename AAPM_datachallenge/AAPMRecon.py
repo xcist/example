@@ -20,7 +20,7 @@ See https://github.com/xcist/example/blob/main/AAPM_datachallenge for additional
 Usage:
   python AAPMRecon.py {anatomy} {input_file_name}
 Input:
-  {anatomy}: could be either h[head], o[other, non-head], or a value of FOV in mm
+  {anatomy}: could be h[head], o[other, non-head], or a value of FOV in mm
   {input_file_name}: input sinogram
 Output:
   {input_file_name}_512x512x4.raw: reconstructed images in binary format, can be opened via ImageJ, etc.
