@@ -15,12 +15,12 @@ from gecatsim.reconstruction.pyfiles import recon
 #=======================================
 def AAPMRecon_help():
     print("""
-AAPM data challenge reconstruction code, version 230919.
+AAPM data challenge reconstruction code, version 240216.
 See https://github.com/xcist/example/blob/main/AAPM_datachallenge for additional details.
 Usage:
   python AAPMRecon.py {anatomy} {input_file_name}
 Input:
-  {anatomy}: head or not, could be either h[head] or o[other, non-head]
+  {anatomy}: could be either h[head], o[other, non-head], or a value of FOV in mm
   {input_file_name}: input sinogram
 Output:
   {input_file_name}_512x512x4.raw: reconstructed images in binary format, can be opened via ImageJ, etc.
@@ -28,7 +28,7 @@ Output:
 Requirements:
   xcist(github.com/xcist/main)
 Bug report:
-  Jiayong Zhang (jiayong.zhang@ge.com)
+  Jiayong Zhang (jiayong.zhang@gehealthcare.com)
 """)
     sys.exit(1)
 
@@ -185,7 +185,9 @@ def AAPMRecon_main(cfg):
 
 if __name__=="__main__":
     # not enough arguments
-    if len(sys.argv) < 3: AAPMRecon_help()
+    if len(sys.argv) < 3:
+	    print("Error! Not enough arguments, please read Usage information below.\n")
+	    AAPMRecon_help()
     anatomy = sys.argv[1]
     if anatomy.lower() == 'h':
         FOV = 220.16
