@@ -170,7 +170,7 @@ def AAPMRecon_init(inp_file, FOV):
     cfg.recon.displayImagePictureAxes = False       # Flag to display the axes on the .png images
     cfg.recon.displayImagePictureTitles = False     # Flag to display the titles on the .png images
 
-    cfg.resultsName = inp_file.split('.')[0]
+    cfg.resultsName = os.path.splitext(inp_file)[0]
 
     if cfg.physics.monochromatic>0:
         cfg.recon.mu = xc.GetMu('water', cfg.physics.monochromatic)[0]/10
