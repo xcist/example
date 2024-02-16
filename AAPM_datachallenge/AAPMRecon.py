@@ -23,7 +23,7 @@ Input:
   {anatomy}: could be h[head], o[other, non-head], or a value of FOV in mm
   {input_file_name}: input sinogram
 Output:
-  {input_file_name}_512x512x4.raw: reconstructed images in binary format, can be opened via ImageJ, etc.
+  {input_file_name}_512x512x1.raw: reconstructed images in binary format, can be opened via ImageJ, etc.
   32 bit floating, little endianess.
 Requirements:
   xcist(github.com/xcist/main)
