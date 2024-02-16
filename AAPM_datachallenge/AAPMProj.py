@@ -18,12 +18,12 @@ import matplotlib.pyplot as plt
 #=======================================
 def AAPMProj_help():
     print("""
-AAPM data challenge forward projection code, version 231025.
+AAPM data challenge forward projection code, version 240216.
 See https://github.com/xcist/example/blob/main/AAPM_datachallenge for additional details.
 Usage:
   python AAPMProj.py {anatomy} {input_file_name}
 Input:
-  {anatomy}: head or not, could be either h[head] or o[other, non-head]
+  {anatomy}: could be h[head], o[other, non-head], or a value of FOV in mm
   {input_file_name}: input images
 Output:
   {input_file_name}_DD2Proj_900x1000.raw: line integrals in binary format, can be opened via ImageJ, etc.
@@ -31,7 +31,7 @@ Output:
 Requirements:
   xcist(github.com/xcist/main)
 Bug report:
-  Jiayong Zhang (jiayong.zhang@ge.com)
+  Jiayong Zhang (jiayong.zhang@gehealthcare.com)
 """)
     sys.exit(1)
 
@@ -51,7 +51,9 @@ def DD2FanProj(nrdet, x0, y0, xds, yds, xCor, yCor, viewangles, nrviews, sinogra
 
 if __name__=="__main__":
     # not enough arguments
-    if len(sys.argv) < 2: AAPMProj_help()
+    if len(sys.argv) < 3:
+        print("Error! Not enough arguments, please read Usage information below.\n")
+        AAPMProj_help()
     anatomy = sys.argv[1]
     if anatomy.lower() == 'h':
         FOV = 220.16
