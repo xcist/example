@@ -53,7 +53,7 @@ for thissub in tqdm(allpaths):
     myrecon[gt_metal_mask] = 0
     gtrecon[gt_metal_mask] = 0
     min2 = -2000
-    max2 = 20000
+    max2 = 6000
     gtrecon = (gtrecon-min2)/(max2-min2)
     myrecon = (myrecon-min2)/(max2-min2)
     gtrecon = np.clip(gtrecon, 0, 1)[:,:,0]
