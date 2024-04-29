@@ -85,7 +85,7 @@ if __name__=="__main__":
     xds = np.single(sdd*np.sin(alphas)/pixsize)
     yds = np.single((sid - sdd*np.cos(alphas))/pixsize)
     
-    viewangles = np.single(1*(0+np.arange(nrviews)/(nrviews-1)*2*np.pi))
+    viewangles = np.single(1*(0+np.arange(nrviews)/nrviews*2*np.pi))
     if inp_file.split('.')[-1] == 'raw':
         raw_img = rawread(inp_file, [512, 512, 1], 'float')
     else:
