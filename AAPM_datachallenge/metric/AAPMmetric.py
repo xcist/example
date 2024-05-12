@@ -36,7 +36,11 @@ rmse_list = []
 for thissub in tqdm(allpaths):
     path_split = thissub.split('/')
     # check difference
-    mypath = glob.glob(my_root+"/*"+path_split[-1].split('_')[3]+"*")[0]
+    mypath_all = glob.glob(my_root+"/*_"+path_split[-1].split('_')[3]+"_*")
+    if len(mypath_all) != 1:
+        print("ERROR! Wrong number of MAR results found.\n")
+        sys.exit(1)
+    mypath = mypath_all[0]
     myimg_paths.append(mypath)
     myrecon = xc.rawread(mypath, [512, 512, 1], 'float')
     myrecon += 1000
