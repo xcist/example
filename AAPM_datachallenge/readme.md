@@ -15,7 +15,7 @@ During this challenge, the feedback datasets were provided in Phase 2 so that th
 To start your benchmark, please follow the steps below.
 
 1)	Read [“Benchmark Tool Overview” page](Benchmark_Tool_Overview.md).
-2)	Download 14,000 training/validation datasets from here: https://rpi.box.com/s/7p8tkqj5ewhtdad2h8kx975i9qg6b7a4. Please read “README_training_data.txt” on the link for the details. If you want to know how the data is generated, please read “Data_generation” page.
+2)	Download 14,000 training/validation datasets from here: https://rpi.box.com/s/7p8tkqj5ewhtdad2h8kx975i9qg6b7a4. Please read “README_training_data.txt” on the link for the details. If you want to know how the data is generated, please read the [“Data_generation” page](data_generation.md).
 3)	Train your MAR algorithm. 
     * You can download Python-based 2D Projection & Reconstruction code from here: https://github.com/xcist/example/tree/main/AAPM_datachallenge/
 	* The output of your MAR algorithm should be a metal-artifact-free recon image but containing metals (512x512 pixels, same format as the recon images provided in the training datasets). Make sure to use the provided recon FOVs.
