@@ -14,7 +14,7 @@ During this challenge, the feedback datasets were provided in Phase 2 so that th
 ### Get Started 
 To start your benchmark, please follow the steps below.
 
-1)	Read “Benchmark Tool Overview” page (this page).
+1)	Read [“Benchmark Tool Overview” page](Benchmark_Tool_Overview.md).
 2)	Download 14,000 training/validation datasets from here: https://rpi.box.com/s/7p8tkqj5ewhtdad2h8kx975i9qg6b7a4. Please read “README_training_data.txt” on the link for the details. If you want to know how the data is generated, please read “Data_generation” page.
 3)	Train your MAR algorithm. 
     * You can download Python-based 2D Projection & Reconstruction code from here: https://github.com/xcist/example/tree/main/AAPM_datachallenge/
