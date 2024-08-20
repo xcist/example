@@ -48,7 +48,7 @@ A total of eight metrics is used to evaluate the MAR images relative to the grou
 ### Patient cases
 The patient scenarios covered in the final evaluation are listed in Table 1.
 
-<img src="https://qtim-challenges.southcentralus.cloudapp.azure.com:9000/public/ct-mar/Eval_Table1.png" width=660px>
+![Table1](assets/Eval_Table1.png)
 
 
 ## References
