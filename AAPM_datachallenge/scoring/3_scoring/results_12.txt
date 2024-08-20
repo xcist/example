@@ -1,8 +1,0 @@
-rmse	2.2091082255045573
-noise	0.0
-sobel_rel_avg	0.0
-streakamplitude	1.8468971252441406
-ssim	1.496338844299315
-metal_geometry_comb	1.9512338425381899
-bone_geometry_comb	2.158777528452606
-spr_maxdiff_rel	4.0
