@@ -18,9 +18,9 @@ Figure 3 shows examples of our generated hybrid data simulations from real patie
 ### Scoring datasets
 Unlike the training datasets with random metal objects, the scoring datasets is based on patient images acquired at the Massachusetts General Hospital and the metal object are manually designed and positioned to represent the most realistic anatomy and metal combinations (e.g. gold markers positioned in the prostate). More details on this are provided under the scoring metrics page.
 
+![Figure2-3](assets/Figure2-3.png)
+![Figure4](assets/Figure4.png)
 
-<img src="https://www.aapm.org/GrandChallenge/CT-MAR/images/Figure2-3.png" width=900px height=180px>
-<img src="https://www.aapm.org/GrandChallenge/CT-MAR/images/Figure4.png" width=800px height=800px>
 
 #### References
 [1] De Man, B., Iterative Reconstruction for Reduction of Metal Artifacts in Computed Tomography, Ph.D. Thesis, University of Leuven, 2001, https://perswww.kuleuven.be/~u0015224/publications/thesis_BrunoDeMan.pdf  
