@@ -6,7 +6,7 @@ This is the scoring program for the [AAPM MAR grand challenge](https://www.aapm.
 * scikit-image
 
 # How to run the scoring program
-1. put your MAR results of `01.raw`, ..., `29.raw` to the `submission` folder
+1. put your MAR results of `01.raw`, ..., `29.raw` to the `submission` folder. The input images should be HU values of size 512x512 pixels in the float32 raw format
 2. run `python score.py`
 
 # output
