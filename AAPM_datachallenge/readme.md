@@ -14,15 +14,13 @@ During this challenge, the feedback datasets were provided in Phase 2 so that th
 ### Get Started 
 To start your benchmark, please follow the steps below.
 
-1)	Read [“Benchmark Tool Overview” page](Benchmark_Tool_Overview.md).
+1)	Read the [“Benchmark Tool Overview” page](Benchmark_Tool_Overview.md).
 2)	Download 14,000 training/validation datasets from here: https://rpi.box.com/s/7p8tkqj5ewhtdad2h8kx975i9qg6b7a4. Please read “README_training_data.txt” on the link for the details. If you want to know how the data is generated, please read the [“Data_generation” page](data_generation.md).
 3)	Train your MAR algorithm. 
     * You can download Python-based 2D Projection & Reconstruction code from here: https://github.com/xcist/example/tree/main/AAPM_datachallenge/proj_and_recon
 	* The output of your MAR algorithm should be a metal-artifact-free recon image but containing metals (512x512 pixels, same format as the recon images provided in the training datasets). Make sure to use the provided recon FOVs.
 
-4)	Download the 29 scoring datasets from
-https://rpi.box.com/s/p8aayubdww9tav66urn9tvpsv2bwyxar
-Please read “README.txt” on the link. 
+4)	Download the 29 scoring datasets from https://rpi.box.com/s/p8aayubdww9tav66urn9tvpsv2bwyxar. Please read “README.txt” on the link. 
 
 5)	Process the 29 scoring datasets with your MAR algorithm to generate metal-artifact-free recon images but containing metals (512x512 pixels, same format as the recon images provided in the training and scoring datasets). Make sure to use the provided recon FOVs in README.txt.
 
@@ -33,7 +31,8 @@ Please read “README.txt” on the link.
     * For your reference, the scores of AAPM CT-MAR Challenge participants can be found on this page.  https://qtim-challenges.southcentralus.cloudapp.azure.com/competitions/1/. Visit the “Results” tab, and select “Phase 3 (Final scoring)” tab. Click eye-shaped button to see their detailed scores.
 
 ### Acknowledgements 
-In your publications, please acknowledge the AAPM CT-MAR challenge data and benchmark tool using the following sentences and references: This work used the AAPM CT-MAR Grand Challenge datasets and benchmark tool [1, 2]. The AAPM CT-MAR Grand Challenge datasets were generated with the open-source CT simulation environment XCIST [3], using a hybrid data simulation framework that combines publicly available clinical images [4, 5] and virtual metal objects.
+In your publications, please acknowledge the AAPM CT-MAR challenge data and benchmark tool using the following sentences and references:
+`This work used the AAPM CT-MAR Grand Challenge datasets and benchmark tool [1, 2]. The AAPM CT-MAR Grand Challenge datasets were generated with the open-source CT simulation environment XCIST [3], using a hybrid data simulation framework that combines publicly available clinical images [4, 5] and virtual metal objects.`
 1. AAPM CT Metal Artifact Reduction (CT-MAR) Grand Challenge: https://www.aapm.org/GrandChallenge/CT-MAR
 2. AAPM CT Metal Artifact Reduction (CT-MAR) Grand Challenge Benchmark Tool: https://github.com/xcist/example/tree/main/AAPM_datachallenge/
 3. M. Wu, P. FitzGerald, J. Zhang, W.P. Segars, H. Yu, Y. Xu, B. De Man, "XCIST - an open access x-ray/CT simulation toolkit," Phys Med Biol. 2022 Sep 28;67(19)
