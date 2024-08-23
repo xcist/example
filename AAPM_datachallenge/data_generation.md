@@ -29,7 +29,7 @@ Unlike the training datasets with random metal objects, the scoring datasets is 
 [3] De Man, B., et al. CatSim: a new computer assisted tomography simulation environment. In Medical Imaging 2007: Physics of Medical Imaging (Vol. 6510, pp. 856-863). SPIE.  
 [4] Wu, M., et al, “XCIST – an open access x-ray/CT simulation toolkit,” Phys. Med. Biol., 2022.  
 [5] FitzGerald, P., et al, 2021. Semiempirical, parameterized spectrum estimation for x‐ray computed tomography. Medical physics, 48(5), pp.2199-2213.  
-[6] Zhang, J., et al, 2023, Accurate modeling of CT spatial resolution with CatSim, Phys. Med. Biol. (pending).  
+[6] Zhang, J., et al, 2023, Development and tuning of models for accurate simulation of CT spatial resolution using CatSim, Phys. Med. Biol., 69(4), p.045014.  
 [7] Zhang, J., et al, 2024, Accurate modeling of CT noise with CatSim, Phys. Med. Biol. (pending).  
 [8] NIH DeepLesion dataset. https://nihcc.app.box.com/v/DeepLesion  
 [9] Goren, N., Dowrick, T., Avery, J., & Holder, D. (2017). UCLH Stroke EIT Dataset - Radiology Data [CT]. Zenodo. https://doi.org/10.5281/zenodo.1199398
