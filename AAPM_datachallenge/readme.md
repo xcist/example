@@ -48,7 +48,7 @@ In any publications that use these training datasets, please acknowledge the AAP
 
 	* The details of scoring metrics can be found on [“Scoring_metrics”](scoring_metric.md) page.
 
-	* For your reference, the scores of AAPM CT-MAR Challenge participants can be found on this page.  https://qtim-challenges.southcentralus.cloudapp.azure.com/competitions/1/. Visit the “Results” tab, and select “Phase 3 (Final scoring)” tab. Click eye-shaped button to see their detailed scores.
+	* For your reference, the scores of AAPM CT-MAR Challenge participants can be found on this page: https://qtim-challenges.southcentralus.cloudapp.azure.com/competitions/1/. Visit the “Results” tab, and select “Phase 3 (Final scoring)” tab. Click eye-shaped button to see their detailed scores.
 
 6)	 Acknowledgements
 
