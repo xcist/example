@@ -27,7 +27,7 @@ Unlike the training datasets with random metal objects, the scoring datasets is 
 [1] De Man, B., Iterative Reconstruction for Reduction of Metal Artifacts in Computed Tomography, Ph.D. Thesis, University of Leuven, 2001, https://perswww.kuleuven.be/~u0015224/publications/thesis_BrunoDeMan.pdf  
 [2] De Man, B., et al., P., 1998, November. Metal streak artifacts in X-ray computed tomography: a simulation study. In 1998 IEEE Nuclear Science Symposium Conference Record. (Vol. 3, pp. 1860-1865). IEEE.  
 [3] De Man, B., et al. CatSim: a new computer assisted tomography simulation environment. In Medical Imaging 2007: Physics of Medical Imaging (Vol. 6510, pp. 856-863). SPIE.  
-[4] M. Wu, P. FitzGerald, J. Zhang, W.P. Segars, H. Yu, Y. Xu, B. De Man, "XCIST - an open access x-ray/CT simulation toolkit," Phys Med Biol. 2022 Sep 28;67(19)
+[4] M. Wu, P. FitzGerald, J. Zhang, W.P. Segars, H. Yu, Y. Xu, B. De Man, "XCIST - an open access x-ray/CT simulation toolkit," Phys Med Biol. 2022 Sep 28;67(19).  
 [5] FitzGerald, P., et al, 2021. Semiempirical, parameterized spectrum estimation for x‐ray computed tomography. Medical physics, 48(5), pp.2199-2213.  
 [6] Zhang J, Wu M, FitzGerald P, Araujo S, De Man B. Development and tuning of models for accurate simulation of CT spatial resolution using CatSim. Phys Med Biol. 2024 Feb 8;69(4)  
 [7] NIH DeepLesion dataset. https://nihcc.app.box.com/v/DeepLesion  
