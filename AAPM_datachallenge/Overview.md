@@ -1,4 +1,4 @@
-## Benchmark Tool Overview
+## Training data and scoring benchmark overview
 The AAPM CT-MAR GC Benchmark tool includes:
 
 * Training/validation datasets
