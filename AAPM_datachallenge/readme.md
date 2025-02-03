@@ -60,3 +60,5 @@ In any publications that use the MAR scoring benchmark, please acknowledge the A
 
 [3] M. Wu, P. FitzGerald, J. Zhang, W.P. Segars, H. Yu, Y. Xu, B. De Man, "XCIST - an open access x-ray/CT simulation toolkit," Phys Med Biol. 2022 Sep 28;67(19)
 
+[4] N. Peters, E. Haneda, J. Zhang, G.M. Karageorgos, W. Xia, J. Verburg, G. Wang, H. Paganetti, and B. De Man, “A hybrid training database and evaluation benchmark for assessing metal artifact reduction methods for imaging and therapy,” Medical Physics, 2025 (Forthcoming)
+
