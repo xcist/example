@@ -42,7 +42,7 @@ In any publications that use these training datasets, please acknowledge the AAP
 
 3)	Process the 29 scoring datasets with your MAR algorithm to generate metal-artifact-free recon images but containing metals (512x512 pixels, same format as the recon images provided in the training datasets). Make sure to use the provided recon FOVs in README.txt.
 
-4)	Evaluate your MAR algorithm. Download the Python scoring program from https://github.com/xcist/example/tree/main/AAPM_datachallenge/proj_and_recon
+4)	Evaluate your MAR algorithm. Download the Python scoring program from https://github.com/xcist/example/tree/main/AAPM_datachallenge/scoring.
 
 5)	Read the instructions and run the scoring program on your 29 processed datasets. The evaluation results will be saved as “scores.html” and “scores.txt”. 
 
