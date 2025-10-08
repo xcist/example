@@ -52,13 +52,18 @@ In any publications that use these training datasets, please acknowledge the AAP
 
 6)	 Acknowledgements
 
-In any publications that use the MAR scoring benchmark, please acknowledge the AAPM CT-MAR benchmark tool using the following sentences and references: *This work used the AAPM CT-MAR Grand Challenge benchmark tool [1, 2]. The AAPM CT-MAR Grand Challenge datasets were generated with the CatSim simulator in the open-source toolkit XCIST [3], using a hybrid data simulation framework that combines clinical images acquired at Massachusetts General Hospital and virtual metal objects.*
+In any publications that use the MAR scoring benchmark, please acknowledge the AAPM CT-MAR benchmark tool using the following sentences and references: *This work used the benchmark tool provided by the AAPM CT-MAR Grand Challenge [1, 2]. The datasets were generated using a hybrid data simulation framework [3], which incorporates publicly available clinical images [4, 5], clinical images acquired at Massachusetts General Hospital, and metal objects using the CatSim simulator in the open-source toolkit XCIST [6].*
 
-[1] AAPM CT Metal Artifact Reduction (CT-MAR) Grand Challenge: https://www.aapm.org/GrandChallenge/CT-MAR/
+[1] E. Haneda, N. Peters, J. Zhang, G. Karageorgos, W. Xia, H. Paganetti, G. Wang, Y. Guo, J. Ma, H.S. Park, K. Jeon, F. Fan, M. Thies, and B. De Man, “AAPM CT Metal Artifact Reduction Grand Challenge,” Med. Phys., vol. 52, no. 10, e70050, 2025.  https://doi.org/10.1002/mp.70050
 
 [2] AAPM CT Metal Artifact Reduction (CT-MAR) Grand Challenge Benchmark Tool: https://github.com/xcist/example/tree/main/AAPM_datachallenge/
 
-[3] M. Wu, P. FitzGerald, J. Zhang, W.P. Segars, H. Yu, Y. Xu, B. De Man, "XCIST - an open access x-ray/CT simulation toolkit," Phys Med Biol. 2022 Sep 28;67(19)
+[3]	N. Peters, E. Haneda, J. Zhang, G. Karageorgos, W. Xia, J. Verburg, G. Wang, H. Paganetti, and B. De Man, “A hybrid training database and evaluation benchmark for assessing metal artifact reduction methods for X-ray CT imaging,” Med. Phys., vol. 52, no. 10, e70020, 2025. https://doi.org/10.1002/mp.70020
 
-[4] N. Peters, E. Haneda, J. Zhang, G.M. Karageorgos, W. Xia, J. Verburg, G. Wang, H. Paganetti, and B. De Man, “A hybrid training database and evaluation benchmark for assessing metal artifact reduction methods for imaging and therapy,” Medical Physics, 2025 (Forthcoming)
+[4]	Ke Yan, Xiaosong Wang, Le Lu, Ronald M. Summers, "DeepLesion: Automated Mining of Large-Scale Lesion Annotations and Universal Lesion Detection with Deep Learning", Journal of Medical Imaging 5(3), 036501 (2018), https://doi.org/10.1117/1.JMI.5.3.036501
+
+[5]	Goren, Nir, Dowrick, Thomas, Avery, James, & Holder, David. (2017). UCLH Stroke EIT Dataset - Radiology Data (CT). Zenodo. https://doi.org/10.5281/zenodo.1215676
+
+[6]	M. Wu, P. FitzGerald, J. Zhang, W.P. Segars, H. Yu, Y. Xu, B. De Man, "XCIST - an open access x-ray/CT simulation toolkit," Phys Med Biol. 2022 Sep 28;67(19). https://doi.org/10.1088/1361-6560/ac9174
+
 
